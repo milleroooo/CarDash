@@ -1,0 +1,91 @@
+<form [formGroup]="carForm" fxLayout="column" fxLayoutAlign="center center" (ngSubmit)="onSubmit()">
+  <mat-card class="new-car">
+    <mat-card-header>
+      <mat-card-title>Car Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div fxLayout="row">
+        <div class="col">
+          <mat-form-field class="full-width" fxFlex.xs="160px">
+            <input matInput placeholder="Brand" formControlName="brand">
+            <mat-error *ngIf="carForm.controls['brand'].hasError('required')">
+              Brand is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width" fxFlex.xs="160px">
+            <input matInput placeholder="Model" formControlName="model">
+            <mat-error *ngIf="carForm.controls['model'].hasError('required')">
+              Model is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout="row">
+        <div class="col">
+          <mat-form-field class="full-width" fxFlex.xs="160px">
+            <mat-select placeholder="Type" formControlName="type">
+              <mat-option *ngFor="let type of types" [value]="type.type">
+                {{ type.type }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="carForm.controls['type'].hasError('required')">
+              Type is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width" fxFlex.xs="160px">
+            <mat-select placeholder="Production Year" formControlName="year">
+              <mat-option *ngFor="let year of years" [value]="year.year">
+                {{ year.year }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="carForm.controls['year'].hasError('required')">
+              Year is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout="row">
+        <div class="col">
+          <mat-form-field class="full-width" fxFlex.xs="160px">
+            <mat-select placeholder="Gearbox" formControlName="gearbox">
+              <mat-option *ngFor="let gearbox of gearbox" [value]="gearbox.type">
+                {{ gearbox.type }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="carForm.controls['gearbox'].hasError('required')">
+              Gearbox is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width" fxFlex.xs="160px">
+            <mat-select placeholder="Engine Capacity" formControlName="engine_capacity">
+              <mat-option *ngFor="let capacity of engine_capacity" [value]="capacity.size">
+                {{ capacity.size }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="carForm.controls['engine_capacity'].hasError('required')">
+              Year is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-radio-group formControlName="petrol">
+            <mat-radio-button value="gasoline">Gasoline</mat-radio-button>
+            <mat-radio-button value="diesel">Diesel</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button mat-raised-button color="primary" type="submit" class="btn">Submit</button>
+    </mat-card-actions>
+    <img src="../../assets/images/dashboardImg.png" fxFlexAlign="center" class="dashboard-image">
+  </mat-card>
+</form>

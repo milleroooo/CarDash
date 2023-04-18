@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cardash-83be6": {
+      "hosting": {
+        "CarDash": [
+          "car-dash"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cardash-83be6"
+  }
+}

@@ -1,0 +1,12 @@
+.header-image{
+  padding-top: 15px;
+  padding-right: 10px;
+}
+.logo{
+  padding-top: 10px;
+  width: 70px;
+  height: 70px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
