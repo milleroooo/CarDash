@@ -2,7 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
-## Website: https://cardash-83be6.web.app
+## Photos
+
+<img width="802" alt="Zrzut ekranu 2023-04-23 o 14 26 00" src="https://user-images.githubusercontent.com/62337671/233839737-5bba859b-42d0-4d6b-b434-bfa8aa8a480f.png">
+<img width="802" alt="Zrzut ekranu 2023-04-23 o 14 27 37" src="https://user-images.githubusercontent.com/62337671/233839805-2cd6d2c6-e548-4312-95cc-3b5b3b183606.png">
 
 ## Development server
 
